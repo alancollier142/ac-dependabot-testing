@@ -21,9 +21,13 @@ on:
           - changed
           - single
 
+permissions:
+  contents: read
 
 jobs:
   terraform-static-analysis:
+    permissions:
+      pull-requests: write
     name: Terraform Static Analysis
     runs-on: ubuntu-latest
     steps:
